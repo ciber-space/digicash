@@ -272,11 +272,11 @@ An extra responsibility is to get a number of confirmations for a given transact
 
 ```sh
 # Run a node
-$ node bin/naivecoin.js
+$ node bin/digicash.js --peers http://peer.digicash.me:3001
 
 # Run two nodes
-$ node bin/naivecoin.js -p 3001 --name 1
-$ node bin/naivecoin.js -p 3002 --name 2 --peers http://localhost:3001
+$ node bin/digicash.js -p 3001 --name 1
+$ node bin/digicash.js -p 3002 --name 2 --peers http://localhost:3001
 
 # Access the swagger API
 http://localhost:3001/api-docs/
@@ -452,32 +452,12 @@ $ curl -X GET --header 'Content-Type: application/json' 'http://localhost:3001/b
 ]
 ```
 
-#### Docker
-
-```sh
-# Build the image
-$ docker build . -t naivecoin
-
-# Run naivecoin in a docker
-$ ./dockerExec.sh
-
-# Run naivecoin in a docker using port 3002
-$ ./dockerExec.sh -p 3002
-
-# Run naivecoin in a docker options
-$ ./dockerExec.sh -h
-Usage: ./dockerExec.sh -a HOST -p PORT -l LOG_LEVEL -e PEERS -n NAME
-
-# Run docker-compose with 3 nodes
-$ docker-compose up
-```
-
 ### Client
 
 ```sh
 # Command-line options
-$ node bin/naivecoin.js -h
-Usage: bin\naivecoin.js [options]
+$ node bin/digicash.js -h
+Usage: bin\digicash.js [options]
 
 Options:
   -a, --host       Host address. (localhost by default)
@@ -493,8 +473,8 @@ Options:
 
 ```sh
 # Cloning repository
-$ git clone git@github.com:conradoqg/naivecoin.git
-$ cd naivecoin
+$ git clone git@github.com:digi-cash/digicash.git
+$ cd digicash
 $ npm install
 
 # Testing
@@ -503,12 +483,8 @@ $ npm test
 
 ### Contribution and License Agreement
 
-If this implementation does something wrong, please feel free to contribute by opening an issue or sending a PR. The main goal of this project is not to create a full-featured cryptocurrency, but a good example of how it works.
-
 If you contribute code to this project, you are implicitly allowing your code
 to be distributed under the Apache 2.0 license. You are also implicitly verifying that
 all code is your original work.
-
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/conradoqg/naivecoin.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20it%20out%3A%20Naivecoin%20-%20a%20cryptocurrency%20implementation%20in%20less%20than%201500%20lines%20of%20code&url=%5Bobject%20Object%5D)
 
 [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/conradoqg/naivecoin/master/LICENSE)
