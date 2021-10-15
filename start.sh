@@ -1,1 +1,1 @@
-node bin/digicash.js --a peer.digicash.me
+node bin/digicash.js --peers http://peer.digicash.me:3001
