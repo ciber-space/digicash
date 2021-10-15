@@ -272,11 +272,8 @@ An extra responsibility is to get a number of confirmations for a given transact
 
 ```sh
 # Run a node
-$ node bin/digicash.js --peers http://peer.digicash.me:3001
-
-# Run two nodes
-$ node bin/digicash.js -p 3001 --name 1
-$ node bin/digicash.js -p 3002 --name 2 --peers http://localhost:3001
+# *Change myhostname to your public IP or a hostname
+$ node bin/digicash.js --a myhostname --peers http://peer.digicash.me:3001
 
 # Access the swagger API
 http://localhost:3001/api-docs/
